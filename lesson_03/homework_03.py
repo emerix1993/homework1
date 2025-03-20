@@ -1,5 +1,13 @@
-alice_in_wonderland = '"Would you tell me, please, which way I ought to go from here?"\n"That depends a good deal on where you want to get to," said the Cat.\n"I don\'t much care where ——" said Alice.\n"Then it doesn\t matter which way you go," said the Cat.\n"—— so long as I get somewhere," Alice added as an explanation.\n"Oh, you\'re sure to do that," said the Cat, "if you only walk long enough."'
-# task 01 == Розділіть змінну alice_in_wonderland так, щоб вона займала декілька фізичних лінії
+alice_in_wonderland =  (
+    '"Would you tell me, please, which way I ought to go from here?"\n'
+    '"That depends a good deal on where you want to get to," said the Cat.\n'
+    '"I don\'t much care where ——" said Alice.\n'
+    
+    '"Then it doesn\'t matter which way you go," said the Cat.\n'
+    '"—— so long as I get somewhere," Alice added as an explanation.\n'
+    
+    '"Oh, you\'re sure to do that," said the Cat, "if you only walk long enough."'
+)
 print(alice_in_wonderland)
 # task 02 == Знайдіть та відобразіть всі символи одинарної лапки (') у тексті
 apostrophes = []
@@ -30,7 +38,10 @@ print(alice_in_wonderland)
 black_sea_area = 436402
 azov_sea_area = 37800
 total_area = black_sea_area + azov_sea_area
-print(f"Загальна площа становить: {total_area}")
+print(f"Задача 4: Яку площу займають Чорне та Азовське моря разом?")
+print(f"Чорне море: {black_sea_area} км²")
+print(f"Азовське море: {azov_sea_area} км²")
+print(f"Разом: {total_area} \n")
 
 
 # task 05
@@ -47,9 +58,11 @@ warehouse_2 = warehouse_1_2 + warehouse_2_3 - total_warehouse
 warehouse_1 = warehouse_1_2 - warehouse_2
 warehouse_3 = warehouse_2_3 - warehouse_2
 
-print(f"Склад 1: {warehouse_1}")
-print(f"Склад 2: {warehouse_2}")
-print(f"Склад 3: {warehouse_3}")
+print(f"Задача 5: Скільки товарів знаходиться на кожному складі?")
+print(f"Склад 1: {warehouse_1} товарів")
+print(f"Склад 2: {warehouse_2} товарів")
+print(f"Склад 3: {warehouse_3} товарів\n")
+
 
 
 # task 06
@@ -59,9 +72,13 @@ print(f"Склад 3: {warehouse_3}")
 вати необхідно буде півтора року по 1179 грн/місяць. Обчисліть
 вартість комп’ютера.
 """
-
-computer_price = 1179 * 18
-print(computer_price)
+monthly_payment = 1179
+months = 18
+computer_price = monthly_payment * months
+print(f"Задача 6: Яка загальна вартість комп'ютера?")
+print(f"Щомісячний платіж: {monthly_payment} грн")
+print(f"Кількість місяців: {months}")
+print(f"Загальна вартість: {computer_price} грн\n")
 
 
 # task 07
@@ -77,7 +94,14 @@ c = 2789 % 5
 d = 7248 % 6
 e = 7128 % 5
 f = 19224 % 9
-print(f"Остача від ділення a = {a},b = {b},c = {c},d = {d},e = {e},f = {f}")
+
+print("Задача 7: Знайди остачу від ділення чисел:")
+print(f"8019 : 8 -> Остача: {a}")
+print(f"9907 : 9 -> Остача: {b}")
+print(f"2789 : 5 -> Остача: {c}")
+print(f"7248 : 6 -> Остача: {d}")
+print(f"7128 : 5 -> Остача: {e}")
+print(f"19224 : 9 -> Остача: {f}")
 
 
 # task 08
@@ -99,8 +123,13 @@ juice = 35*4
 cake = 350
 water = 21*3
 total_birthday_cost = big_pizza_price + middle_pizza_price + juice + cake + water
-print(f"Загальна вартість:{total_birthday_cost}")
-
+print(f"Задача 8: Скільки грошей знадобиться на день народження?")
+print(f"Велика піца: {big_pizza_price} грн")
+print(f"Середня піца: {middle_pizza_price} грн")
+print(f"Сік: {juice} грн")
+print(f"Торт: {cake} грн")
+print(f"Вода: {water} грн")
+print(f"Загальна сума: {total_birthday_cost} грн\n")
 
 # task 09
 """
@@ -113,7 +142,11 @@ print(f"Загальна вартість:{total_birthday_cost}")
 all_photo = 232
 one_page = 8
 total_page = all_photo//one_page
-print(f"Знадобиться {total_page} сторінок")
+
+print(f"Задача 9: Скільки сторінок потрібно для фотоальбому?")
+print(f"Загальна кількість фото: {all_photo}")
+print(f"На одній сторінці вміщується: {one_page} фото")
+print(f"Необхідно сторінок: {total_page}\n")
 
 
 # task 10
@@ -137,6 +170,10 @@ total_fuel_needed = (distance / 100) * fuel_per_100km
 #2
 refuel_count = total_fuel_needed / fuel_tank
 
-print(f"1) Загальна кількість бензину: {total_fuel_needed} літрів")
-print(f"2) Мінімальна кількість заправок: {refuel_count}")
+print(f"Задача 10: Скільки бензину потрібно для поїздки з Харкова в Будапешт?")
+print(f"Загальна відстань: {distance} км")
+print(f"Витрати пального: {fuel_per_100km} л на 100 км")
+print(f"Необхідно пального: {total_fuel_needed:.2f} л")
+print(f"Місткість бака: {fuel_tank} л")
+print(f"Мінімальна кількість заправок: {int(refuel_count)}\n")
 
