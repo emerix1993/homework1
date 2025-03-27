@@ -72,8 +72,11 @@ print(second_time)
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-adwentures_of_tom_sawer_sentences = re.split(r"(?<=[.!?])\s+", adwentures_of_tom_sawer)
+temp_text = adwentures_of_tom_sawer.replace(". ", ".|").replace("! ", "!|").replace("? ", "?|")
+adwentures_of_tom_sawer_sentences = temp_text.split("|")
+adwentures_of_tom_sawer_sentences = [sentence.strip() for sentence in adwentures_of_tom_sawer_sentences]
 print(adwentures_of_tom_sawer_sentences)
+
 
 # task 08
 """ Виведіть четверте речення з adwentures_of_tom_sawer_sentences.
