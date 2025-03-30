@@ -39,8 +39,7 @@ print(adwentures_of_tom_sawer)
 """ Зробіть так, щоб у тексті було не більше одного пробілу між словами.
 """
 
-import re
-adwentures_of_tom_sawer = re.sub(r'\s+', ' ', adwentures_of_tom_sawer)
+adwentures_of_tom_sawer = ' ' .join(adwentures_of_tom_sawer.split())
 print(adwentures_of_tom_sawer)
 
 # task 04
@@ -72,9 +71,7 @@ print(second_time)
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-temp_text = adwentures_of_tom_sawer.replace(". ", ".|").replace("! ", "!|").replace("? ", "?|")
-adwentures_of_tom_sawer_sentences = temp_text.split("|")
-adwentures_of_tom_sawer_sentences = [sentence.strip() for sentence in adwentures_of_tom_sawer_sentences]
+adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(". ")
 print(adwentures_of_tom_sawer_sentences)
 
 
